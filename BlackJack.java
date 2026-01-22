@@ -3,12 +3,14 @@ import java.util.Scanner;
 
 public class BlackJack {
 
+    //This is a constant - I cannot change these values//
     private static final String[] SUITS = { "Hearts", "Diamonds", "Clubs", "Spades" };
     private static final String[] RANKS = { "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King",
             "Ace" };
     private static final int[] DECK = new int[52];
     private static int currentCardIndex = 0;
 
+    //This, from lines 14 to 32, contains the main strand of code to shuffle the deck, set the score needed to win, and deals the initial cards, ending with the win condition//
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
