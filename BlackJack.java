@@ -1,3 +1,11 @@
+/******************************************************************************
+
+Eura Pulliam
+1.22.26
+Reviewing Arrays
+
+*******************************************************************************/
+
 import java.util.Random;
 import java.util.Scanner;
 
@@ -86,7 +94,7 @@ public class BlackJack {
         }
         return playerTotal;
     }
-
+//Adds new cards to the dealers total as long as its less than 17, and when it passes 17 it finishes.//
     private static int dealerTurn(int dealerTotal) {
         while (dealerTotal < 17) {
             int newCard = dealCard();
@@ -95,7 +103,7 @@ public class BlackJack {
         System.out.println("Dealer's total is " + dealerTotal);
         return dealerTotal;
     }
-
+//Focuses on the win or lose conditions of this game, checking to see if the user total is under 21, over 21, or equal to 21, and if its greater than the dealer total.//
     private static void determineWinner(int playerTotal, int dealerTotal) {
         if (dealerTotal > 21 || playerTotal > dealerTotal) {
             System.out.println("You win!");
@@ -105,7 +113,7 @@ public class BlackJack {
             System.out.println("Dealer wins!");
         }
     }
-
+//from 109-124, i cant figure out what these lines do.//
     private static int dealCard() {
         return DECK[currentCardIndex++] % 13;
     }
