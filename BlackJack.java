@@ -65,7 +65,7 @@ public class BlackJack {
         System.out.println("Dealer's card: " + RANKS[card1] + " of " + SUITS[DECK[currentCardIndex] % 4]);
         return cardValue(card1);
     }
-
+//From lines 69 to 87, this code provides the players actions, including hit (Getting a card) and stand (Keeping the same card value) until you either overcount the main number needed or stand with the amount of cards the user has.//
     private static int playerTurn(Scanner scanner, int playerTotal) {
         while (true) {
             System.out.println("Your total is " + playerTotal + ". Do you want to hit or stand?");
