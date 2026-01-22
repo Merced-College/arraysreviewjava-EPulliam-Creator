@@ -3,14 +3,14 @@ import java.util.Scanner;
 
 public class BlackJack {
 
-    //This is a constant - I cannot change these values//
+//This is a constant - I cannot change these values//
     private static final String[] SUITS = { "Hearts", "Diamonds", "Clubs", "Spades" };
     private static final String[] RANKS = { "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King",
             "Ace" };
     private static final int[] DECK = new int[52];
     private static int currentCardIndex = 0;
 
-    //This, from lines 14 to 32, contains the main strand of code to shuffle the deck, set the score needed to win, and deals the initial cards, ending with the win condition//
+//This, from lines 14 to 32, contains the main strand of code to shuffle the deck, set the score needed to win, and deals the initial cards, ending with the win condition//
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -31,13 +31,13 @@ public class BlackJack {
 
         scanner.close();
     }
-
+//From lines 35-38 sets the deck length.//
     private static void initializeDeck() {
         for (int i = 0; i < DECK.length; i++) {
             DECK[i] = i;
         }
     }
-
+//From lines 41 to 51 they, it shuffles the deck length specified above, then prints it out.//
     private static void shuffleDeck() {
         Random random = new Random();
         for (int i = 0; i < DECK.length; i++) {
@@ -51,7 +51,7 @@ public class BlackJack {
             System.out.println(DECK[i] + " ");
         }
     }
-
+//From lines 55 to 60 it provides the user two cards, including number and suit, then prints out that the user has the two cards needed.//
     private static int dealInitialPlayerCards() {
         int card1 = dealCard();
         int card2 = dealCard();
@@ -59,7 +59,7 @@ public class BlackJack {
                 + RANKS[card2] + " of " + SUITS[card2 / 13]);
         return cardValue(card1) + cardValue(card2);
     }
-
+//From lines 63 to 66 it provides the dealers card number and suit.//
     private static int dealInitialDealerCards() {
         int card1 = dealCard();
         System.out.println("Dealer's card: " + RANKS[card1] + " of " + SUITS[DECK[currentCardIndex] % 4]);
